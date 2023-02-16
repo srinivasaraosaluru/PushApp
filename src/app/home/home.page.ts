@@ -25,11 +25,20 @@ export class HomePage {
   }
 
   async addListener(){
+
+    EmarsysSDKCustom.setContact({
+      "contactFieldId":380356580,
+      "contactFieldValue": "Testing Srinivas From Ionic App v1"
+    });
+
+    console.log("Set It to System");
     EmarsysSDKCustom.addListener('pushMessageEvent', (message: any) => {
       // do something
       alert("asdsad");
       console.log("Testing.....");
     });
+
+
   }
 
 }
